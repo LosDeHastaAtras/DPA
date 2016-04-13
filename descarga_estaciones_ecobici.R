@@ -1,4 +1,5 @@
 library(RJSONIO)
+library(readr)
 
 # client_id = "577_4jumf047jam88ksscgkk84sgskwgws0w8ooo4gw84kswk4kokg"
 # client_secret = "1c6nfmvo702s008w0o8gw008k80c8cskogcs0w08s4k0wcokog"
@@ -32,4 +33,7 @@ lista_estaciones <- lapply(1:length(dir$stations), function(i) {
 })
 
 df_estaciones <- as.data.frame(do.call("rbind", lista_estaciones))
+
+saveRDS(df_estaciones'data/estaciones.rds')
+
 
